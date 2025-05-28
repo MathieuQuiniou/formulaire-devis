@@ -1,0 +1,451 @@
+.availability-wrapper {
+  padding: 1.5rem 2rem 2rem 2rem; /* ✅ Padding top réduit */
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem; /* ✅ Réduit de 0.5rem */
+  color: #222;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem; /* ✅ Réduit de 1.5rem */
+}
+
+.availability-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px; /* ✅ Réduit de 12px */
+  overflow: hidden;
+}
+
+/* 🧱 Table rows */
+.row,
+.header-row {
+  display: flex;
+}
+
+/* 🧩 Cellule standard - TAILLE RÉDUITE */
+.cell {
+  flex: 1;
+  padding: 0.8rem; /* ✅ Réduit de 1.1rem à 0.8rem */
+  text-align: center;
+  font-size: 0.85rem; /* ✅ Réduit de 0.95rem */
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.cell:last-child {
+  border-right: none;
+}
+
+/* 🏷 En-tête */
+.header-cell {
+  background-color: #f7f7f7;
+  font-weight: 600;
+  color: #444;
+  padding: 0.7rem; /* ✅ Réduit pour l'en-tête */
+}
+
+/* 🏷 Première colonne - LARGEUR RÉDUITE */
+.label-cell {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #333;
+  min-width: 110px; /* ✅ Réduit de 150px à 110px */
+  font-size: 0.8rem; /* ✅ Plus petit pour les jours */
+}
+
+/* ✅ Sélection MOBILE-FRIENDLY */
+.selectable {
+  cursor: pointer;
+  background: white;
+  user-select: none;
+  border-radius: 4px;
+  min-height: 45px;
+  /* ✅ Amélioration tactile mobile */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.selectable:hover,
+.selectable:active {
+  background-color: #f3f3f3;
+  transform: scale(1.02);
+}
+
+.selectable.required {
+  background-color: #a55eea;
+  color: white;
+  font-weight: 600;
+}
+
+.selectable.optional {
+  background-color: #ffe07d;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 🔶 Légende - COMPACTE */
+.legend {
+  margin-top: 1.5rem; /* ✅ Réduit de 2rem */
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ✅ Réduit de 30px */
+  font-size: 0.85rem; /* ✅ Réduit de 0.95rem */
+  color: #555;
+  flex-wrap: wrap;
+  justify-content: center; /* ✅ Centré */
+}
+
+.legend-box {
+  width: 16px; /* ✅ Réduit de 18px */
+  height: 16px;
+  border-radius: 3px; /* ✅ Réduit de 4px */
+  display: inline-block;
+  margin-right: 6px; /* ✅ Réduit de 8px */
+}
+
+.legend-box.required {
+  background-color: #a55eea;
+}
+
+.legend-box.optional {
+  background-color: #ffe07d;
+}
+
+/* 🎯 Boutons */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem; /* ✅ Réduit de 2rem */
+}
+
+.btn-purple {
+  background-color: #a259ff;
+  color: white;
+  border: none;
+  padding: 12px 20px; /* ✅ Réduit de 14px 22px */
+  border-radius: 6px; /* ✅ Réduit de 8px */
+  font-size: 14px; /* ✅ Réduit de 15px */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-purple:hover {
+  background-color: #9146ff;
+  transform: translateY(-1px);
+}
+
+.btn-purple:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 20px; /* ✅ Réduit */
+  border-radius: 6px; /* ✅ Réduit */
+  font-size: 14px; /* ✅ Réduit */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* 👉 Image de la main en bas à droite */
+.availability-pointer-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 250px; /* ✅ Réduit de 300px */
+  z-index: 20;
+  pointer-events: none;
+}
+
+.calendar-icon {
+  width: 22px; /* ✅ Réduit de 24px */
+  height: 22px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+/* TIP BOX - COMPACTE */
+.availability-tip-box {
+  background-color: #f1e6ff;
+  padding: 12px 18px; /* ✅ Encore plus réduit */
+  border-radius: 10px;
+  margin-bottom: 1.2rem; /* ✅ Réduit de 20px */
+}
+
+.availability-tip-text {
+  font-size: 13px; /* ✅ Réduit de 14px */
+  color: #333;
+  margin: 0;
+  line-height: 1.5; /* ✅ Réduit de 1.6 */
+}
+
+.eddmon-logo {
+  height: 45px; /* ✅ Réduit de 50px */
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem; /* ✅ Réduit de 1rem */
+}
+
+/* COMPTEUR DE CRÉNEAUX - STYLE AMÉLIORÉ */
+.text-end {
+  text-align: center; /* ✅ Centré au lieu de droite */
+}
+
+.text-end p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* 📱 RESPONSIVE MOBILE AMÉLIORÉ */
+@media (max-width: 768px) {
+  .availability-wrapper {
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtext {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .availability-tip-box {
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+  }
+
+  .availability-tip-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* ✅ TABLEAU MOBILE OPTIMISÉ */
+  .availability-table {
+    border-radius: 8px;
+    font-size: 12px;
+  }
+
+  .cell {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.7rem;
+    min-height: 35px;
+  }
+
+  .header-cell {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .label-cell {
+    min-width: 70px;
+    font-size: 0.65rem;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .selectable {
+    min-height: 35px;
+    border-radius: 3px;
+  }
+
+  /* ✅ LÉGENDE MOBILE */
+  .legend {
+    gap: 15px;
+    font-size: 0.7rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .legend-box {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+
+  /* ✅ BOUTON MOBILE */
+  .text-end {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .text-end p {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .btn-purple {
+    font-size: 14px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .availability-wrapper {
+    padding: 0.8rem;
+    margin: 0.3rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .subtext {
+    font-size: 0.75rem;
+  }
+
+  /* ✅ INDICATION SCROLL MOBILE */
+  .availability-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  .availability-table::after {
+    content: "← Faites glisser →";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    color: #999;
+    white-space: nowrap;
+  }
+
+  .row,
+  .header-row {
+    min-width: 420px; /* ✅ Largeur minimale réduite */
+    flex-wrap: nowrap;
+  }
+
+  .cell {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.2rem;
+    min-height: 32px;
+  }
+
+  .header-cell {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.15rem;
+  }
+
+  .label-cell {
+    min-width: 60px;
+    font-size: 0.6rem;
+    padding: 0.3rem 0.15rem;
+  }
+
+  .selectable {
+    min-height: 32px;
+  }
+
+  /* ✅ SCROLLBAR MOBILE */
+  .availability-table::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .availability-table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+  }
+
+  .availability-table::-webkit-scrollbar-thumb {
+    background: #8b5cf6;
+    border-radius: 2px;
+  }
+
+  /* ✅ TIP MOBILE */
+  .availability-tip-box {
+    padding: 8px 12px;
+  }
+
+  .availability-tip-text {
+    font-size: 11px;
+  }
+
+  /* ✅ LÉGENDE MOBILE COMPACTE */
+  .legend {
+    gap: 10px;
+    font-size: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .legend-box {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+  }
+
+  /* ✅ BOUTON MOBILE PLEINE LARGEUR */
+  .btn-purple {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .text-end p {
+    font-size: 0.7rem;
+  }
+
+  /* ✅ CALENDRIER ICON PLUS PETIT */
+  .calendar-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.btn-icon-outside {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  background: none;
+  border: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.btn-icon-outside .icon-left {
+  width: 26px; /* ✅ Réduit de 28px */
+  height: 26px;
+}
+
+.btn-icon-outside:hover {
+  opacity: 0.7;
+}

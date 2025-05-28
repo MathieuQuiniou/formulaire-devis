@@ -1,0 +1,190 @@
+.service-choice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.eddmon-logo {
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+.step-title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* WRAPPER */
+.service-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+/* SERVICE LIST */
+.service-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 700px;
+}
+
+.service-box:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.service-box.selected {
+  border: 2px solid #a259ff;
+}
+
+/* HEADER */
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-price {
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(162, 89, 255, 0.1);
+  color: #a259ff;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* SUBTITLE */
+.service-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: #bbb;
+}
+
+/* DÉTAILS EXTENSIBLES */
+.details {
+  margin-top: 16px;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* TARIF */
+.tarif-list div {
+  margin: 4px 0;
+}
+
+/* BOUTON */
+.select-service-btn,
+.btn.btn-primary {
+  background-color: #a259ff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.select-service-btn:hover,
+.btn.btn-primary:hover {
+  background-color: #8e4bdd;
+}
+
+/* PASTEL COLORS */
+.bg-blue {
+  background-color: #e7f0fb;
+}
+
+.bg-orange {
+  background-color: #fff4e5;
+}
+
+.bg-pink {
+  background-color: #ffeef2;
+}
+
+/* PANIER */
+.cart-summary-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+  padding: 32px 24px;
+  width: 100%;
+  min-width: 360px;
+  height: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-summary-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.cart-summary-img {
+  max-width: 140px;
+  height: auto;
+}
+
+.cart-summary-placeholder {
+  font-size: 14px;
+  color: #8a5cf6;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .service-cards-wrapper {
+    flex-direction: column;
+  }
+
+  .service-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cart-summary-box {
+    max-width: 100%;
+    margin-top: 24px;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

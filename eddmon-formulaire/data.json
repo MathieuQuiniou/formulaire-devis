@@ -1,0 +1,16 @@
+{
+  "service": "Cours particuliers",
+  "prenom": "Julien",
+  "classe": "Terminale",
+  "besoins": ["Mathématiques", "Préparation bac"],
+  "particularites": ["Trouble DYS", "Besoin de méthodologie"],
+  "objectifs": "Gagner en confiance",
+  "matieres": ["Maths", "Physique-Chimie"],
+  "nombreDeCours": 2,
+  "dureeSeances": "1h30",
+  "disponibilites": ["Lundi 18h", "Jeudi 17h"],
+  "civilite": "M.",
+  "nomParent": "Julien Dupont",
+  "telephoneParent": "+33 6 12 34 56 78",
+  "email": "julien@example.com"
+}

@@ -1,0 +1,844 @@
+.cart-summary-container {
+  position: relative;
+  width: 100%;
+}
+
+.cart-summary-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.cart-summary-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #000;
+  text-align: center;
+}
+
+.cart-summary-section {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+}
+
+.section-divider {
+  width: 100%;
+  border-top: 2px solid #a259ff;
+  margin: 24px 0;
+}
+
+.cart-summary-label {
+  font-weight: bold;
+  font-size: 15px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(74%) saturate(937%) hue-rotate(240deg) brightness(100%) contrast(101%);
+}
+
+.cart-summary-pricing {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.price-reduced {
+  background-color: #f1e6ff;
+  color: #a259ff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.price-base {
+  font-size: 13px;
+  color: #888;
+}
+
+.discount {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.badge-container-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.badge-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-summary-badge {
+  background-color: #f1e6ff;
+  color: #a259ff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.cart-summary-promo {
+  color: #a259ff;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.cart-summary-alert {
+  background-color: #f1e6ff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.cart-summary-placeholder {
+  text-align: center;
+  font-size: 14px;
+  color: #a259ff;
+  margin-top: 12px;
+}
+
+.cart-summary-img {
+  width: 280px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .cart-summary-box {
+    padding: 20px 16px;
+  }
+
+  .cart-summary-title {
+    font-size: 16px;
+  }
+
+  .cart-summary-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cart-summary-label {
+    font-size: 14px;
+  }
+
+  .price-reduced {
+    font-size: 14px;
+  }
+
+  .cart-summary-img {
+    width: 200px;
+  }
+
+  .badge-container-inline {
+    margin-left: 4px;
+  }
+
+  .cart-summary-alert {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+/* ✅ SECTION CODE PROMO */
+.cart-summary-promo-section {
+  margin: 15px 0;
+}
+
+/* Lien "Vous avez un code promo ?" */
+.cart-summary-promo {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.promo-link-button {
+  background: none;
+  border: none;
+  color: #a259ff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  font-family: inherit;
+}
+
+.promo-link-button:hover {
+  color: #9146ff;
+}
+
+/* ✅ CHAMP DE SAISIE DU CODE PROMO */
+.promo-input-section {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.promo-label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.promo-input-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.promo-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.promo-input:focus {
+  outline: none;
+  border-color: #a259ff;
+  box-shadow: 0 0 0 2px rgba(162, 89, 255, 0.1);
+}
+
+.promo-input-error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1) !important;
+}
+
+.promo-validate-btn {
+  padding: 8px 16px;
+  background: #a259ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 70px;
+}
+
+.promo-validate-btn:hover:not(:disabled) {
+  background: #9146ff;
+}
+
+.promo-validate-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.promo-cancel-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.promo-cancel-btn:hover {
+  color: #333;
+}
+
+/* ✅ MESSAGES D'ERREUR ET SUCCÈS */
+.promo-error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.promo-applied {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-success {
+  font-size: 13px;
+  color: #155724;
+  line-height: 1.4;
+}
+
+.promo-description {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.promo-remove-btn {
+  background: none;
+  border: none;
+  color: #155724;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.promo-remove-btn:hover {
+  color: #0c4128;
+}
+
+/* ✅ PRIX AVEC RÉDUCTION */
+.price-original {
+  color: #999;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.price-discounted {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-summary-pricing {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.price-base {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.discount {
+  font-size: 11px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+  .promo-input-container {
+    flex-direction: column;
+  }
+  
+  .promo-validate-btn {
+    width: 100%;
+  }
+  
+  .promo-applied {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .promo-remove-btn {
+    align-self: flex-end;
+  }
+}
+/* ✅ AJOUTEZ CE CSS À LA FIN DE VOTRE CartSummary.css */
+
+/* ===== IMAGES QUI DÉBORDENT DU PANIER ===== */
+
+/* Container principal - permettre le débordement */
+.cart-summary-container {
+  position: relative;
+  overflow: visible !important;
+  z-index: 1;
+}
+
+.cart-summary-box {
+  position: relative;
+  overflow: visible !important;
+  /* Ajouter de l'espace pour les images qui débordent */
+  padding-bottom: 50px;
+  padding-right: 40px;
+}
+
+/* Container de l'image débordante */
+.service-image-container {
+  position: absolute;
+  bottom: -25px;  /* Déborde vers le bas */
+  right: -15px;   /* Déborde vers la droite */
+  z-index: 10;
+  pointer-events: none; /* Pas d'interaction */
+  overflow: visible;
+}
+
+/* Styles des images selon le type */
+.service-image {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+/* Image de direction (flèche vers le haut) */
+.service-image.direction-arrow {
+  width: 140px;
+  height: auto;
+  opacity: 0.95;
+}
+
+/* Image main magique */
+.service-image.magic-hand {
+  width: 200px;
+  height: auto;
+  opacity: 1;
+}
+
+/* Image babysitting */
+.service-image.babysitting {
+  width: 220px;
+  height: auto;
+  bottom: -35px;
+  right: -25px;
+}
+
+/* Image tutorat */
+.service-image.tutoring {
+  width: 160px;
+  height: auto;
+  bottom: -20px;
+  right: -10px;
+}
+
+/* Image musique */
+.service-image.music {
+  width: 180px;
+  height: auto;
+  bottom: -30px;
+  right: -20px;
+}
+
+/* Animation flottante pour les images */
+.service-image.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-8px) rotate(1deg); 
+  }
+}
+
+/* Effet hover sur le panier */
+.cart-summary-container:hover .service-image {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablettes */
+@media (max-width: 768px) {
+  .cart-summary-box {
+    padding-bottom: 40px;
+    padding-right: 30px;
+  }
+  
+  .service-image-container {
+    bottom: -20px;
+    right: -10px;
+  }
+  
+  .service-image.direction-arrow {
+    width: 100px;
+  }
+  
+  .service-image.magic-hand {
+    width: 150px;
+  }
+  
+  .service-image.babysitting {
+    width: 160px;
+    bottom: -25px;
+    right: -15px;
+  }
+  
+  .service-image.tutoring {
+    width: 120px;
+    bottom: -15px;
+    right: -5px;
+  }
+  
+  .service-image.music {
+    width: 130px;
+    bottom: -20px;
+    right: -10px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .cart-summary-box {
+    padding-bottom: 30px;
+    padding-right: 20px;
+  }
+  
+  .service-image-container {
+    bottom: -15px;
+    right: -5px;
+  }
+  
+  .service-image.direction-arrow {
+    width: 80px;
+  }
+  
+  .service-image.magic-hand {
+    width: 120px;
+  }
+  
+  .service-image.babysitting {
+    width: 130px;
+    bottom: -20px;
+    right: -10px;
+  }
+  
+  .service-image.tutoring {
+    width: 90px;
+    bottom: -10px;
+    right: 0px;
+  }
+  
+  .service-image.music {
+    width: 100px;
+    bottom: -15px;
+    right: -5px;
+  }
+  
+  /* Désactiver l'animation sur mobile pour les performances */
+  .service-image.floating {
+    animation: none;
+  }
+}
+
+/* Très petits écrans - masquer les images */
+@media (max-width: 320px) {
+  .service-image-container {
+    display: none;
+  }
+  
+  .cart-summary-box {
+    padding-bottom: 32px;
+    padding-right: 28px;
+  }
+}
+/* ===== IMAGES QUI DÉBORDENT DU PANIER - VERSION AMÉLIORÉE ===== */
+
+/* Container principal - permettre le débordement */
+.cart-summary-container {
+  position: relative;
+  overflow: visible !important;
+  z-index: 1;
+}
+
+.cart-summary-box {
+  position: relative;
+  overflow: visible !important;
+  /* Ajouter beaucoup plus d'espace pour les images qui débordent */
+  padding-bottom: 100px;
+  padding-right: 80px;
+}
+
+/* Container de l'image débordante */
+.service-image-container {
+  position: absolute;
+  bottom: -50px;  /* Déborde beaucoup plus vers le bas */
+  right: -40px;   /* Déborde plus vers la droite */
+  z-index: 10;
+  pointer-events: none; /* Pas d'interaction */
+  overflow: visible;
+}
+
+/* Styles des images selon le type */
+.service-image {
+  filter: drop-shadow(0 6px 20px rgba(162, 89, 255, 0.3));
+  transition: all 0.4s ease;
+  object-fit: contain;
+  transform-origin: bottom right;
+}
+
+/* Image de direction (flèche vers le haut) */
+.service-image.direction-arrow {
+  width: 250px;  /* Beaucoup plus grande */
+  height: auto;
+  opacity: 0.9;
+  transform: rotate(-15deg); /* Légère rotation pour plus de dynamisme */
+}
+
+/* Image main magique */
+.service-image.magic-hand {
+  width: 320px;  /* Beaucoup plus grande */
+  height: auto;
+  opacity: 1;
+  transform: rotate(10deg); /* Rotation pour plus de naturel */
+}
+
+/* Image babysitting */
+.service-image.babysitting {
+  width: 350px;  /* Beaucoup plus grande */
+  height: auto;
+  bottom: -60px;
+  right: -50px;
+  transform: rotate(-5deg);
+}
+
+/* Image tutorat */
+.service-image.tutoring {
+  width: 280px;  /* Plus grande */
+  height: auto;
+  bottom: -45px;
+  right: -35px;
+  transform: rotate(12deg);
+}
+
+/* Image musique */
+.service-image.music {
+  width: 300px;  /* Plus grande */
+  height: auto;
+  bottom: -55px;
+  right: -45px;
+  transform: rotate(-8deg);
+}
+
+/* Animation flottante améliorée pour les images */
+.service-image.floating {
+  animation: advancedFloat 8s ease-in-out infinite;
+}
+
+@keyframes advancedFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(var(--base-rotation, 0deg)) scale(1); 
+  }
+  25% { 
+    transform: translateY(-5px) rotate(calc(var(--base-rotation, 0deg) + 2deg)) scale(1.02); 
+  }
+  50% { 
+    transform: translateY(-12px) rotate(calc(var(--base-rotation, 0deg) - 1deg)) scale(1.05); 
+  }
+  75% { 
+    transform: translateY(-8px) rotate(calc(var(--base-rotation, 0deg) + 1deg)) scale(1.02); 
+  }
+}
+
+/* Variables CSS pour les rotations de base */
+.service-image.direction-arrow {
+  --base-rotation: -15deg;
+}
+
+.service-image.magic-hand {
+  --base-rotation: 10deg;
+}
+
+.service-image.babysitting {
+  --base-rotation: -5deg;
+}
+
+.service-image.tutoring {
+  --base-rotation: 12deg;
+}
+
+.service-image.music {
+  --base-rotation: -8deg;
+}
+
+/* Effet hover sur le panier - plus dramatique */
+.cart-summary-container:hover .service-image {
+  transform: scale(1.15) rotate(calc(var(--base-rotation, 0deg) + 8deg));
+  filter: drop-shadow(0 12px 40px rgba(162, 89, 255, 0.5));
+}
+
+/* Effet d'apparition progressive */
+.service-image {
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.service-image:not(.floating) {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== RESPONSIVE AMÉLIORÉ ===== */
+
+/* Tablettes */
+@media (max-width: 768px) {
+  .cart-summary-box {
+    padding-bottom: 80px;
+    padding-right: 60px;
+  }
+  
+  .service-image-container {
+    bottom: -40px;
+    right: -30px;
+  }
+  
+  .service-image.direction-arrow {
+    width: 180px;
+  }
+  
+  .service-image.magic-hand {
+    width: 240px;
+  }
+  
+  .service-image.babysitting {
+    width: 260px;
+    bottom: -50px;
+    right: -40px;
+  }
+  
+  .service-image.tutoring {
+    width: 200px;
+    bottom: -35px;
+    right: -25px;
+  }
+  
+  .service-image.music {
+    width: 220px;
+    bottom: -40px;
+    right: -30px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .cart-summary-box {
+    padding-bottom: 60px;
+    padding-right: 40px;
+  }
+  
+  .service-image-container {
+    bottom: -30px;
+    right: -20px;
+  }
+  
+  .service-image.direction-arrow {
+    width: 140px;
+  }
+  
+  .service-image.magic-hand {
+    width: 180px;
+  }
+  
+  .service-image.babysitting {
+    width: 200px;
+    bottom: -40px;
+    right: -30px;
+  }
+  
+  .service-image.tutoring {
+    width: 150px;
+    bottom: -25px;
+    right: -15px;
+  }
+  
+  .service-image.music {
+    width: 160px;
+    bottom: -30px;
+    right: -20px;
+  }
+  
+  /* Animation plus subtile sur mobile */
+  .service-image.floating {
+    animation: mobileFloat 10s ease-in-out infinite;
+  }
+  
+  @keyframes mobileFloat {
+    0%, 100% { 
+      transform: translateY(0px) rotate(var(--base-rotation, 0deg)); 
+    }
+    50% { 
+      transform: translateY(-5px) rotate(calc(var(--base-rotation, 0deg) + 1deg)); 
+    }
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 320px) {
+  .service-image-container {
+    display: none;
+  }
+  
+  .cart-summary-box {
+    padding-bottom: 32px;
+    padding-right: 28px;
+  }
+}
+
+/* ===== AMÉLIORATIONS SPÉCIFIQUES SELON L'ÉTAPE ===== */
+
+/* Styles spéciaux pour l'étape finale */
+.cart-summary-container[data-step="5"] .service-image.magic-hand {
+  animation: magicPulse 3s ease-in-out infinite;
+}
+
+@keyframes magicPulse {
+  0%, 100% {
+    transform: rotate(10deg) scale(1);
+    filter: drop-shadow(0 6px 20px rgba(162, 89, 255, 0.3));
+  }
+  50% {
+    transform: rotate(12deg) scale(1.08);
+    filter: drop-shadow(0 8px 25px rgba(162, 89, 255, 0.5));
+  }
+}
+
+/* Amélioration visuelle du panier lui-même */
+.cart-summary-box {
+  transition: all 0.3s ease;
+}
+
+.cart-summary-container:hover .cart-summary-box {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+/* Image du panier vide agrandie - FORCE L'AFFICHAGE */
+.cart-summary-img {
+  width: 300px !important;  /* Force la taille avec !important */
+  max-width: none !important;  /* Supprime toute limitation de taille */
+  margin: 0 auto 20px !important;
+  display: block !important;
+  height: auto !important;
+}
